@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: rgb(24, 143, 255);
+    --secondary: rgb(87, 87, 87);
+    --success: rgb(43, 221, 82);
+    --warning: rgb(255, 162, 22);
+    --danger: rgb(240, 44, 44);
+    --info: rgb(91, 167, 238);
+    --light: rgb(247, 247, 247);
+    --dark: rgb(31, 31, 31);
+    --main-tween: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --normal-tween: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+.btn {
+    background-color: var(--primary);
+    border: none;
+    color: white;
+    padding: 13px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-family: 'Comfortaa', cursive;
+
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 13px;
+}
+
+.btn-large {
+    padding: 14px 35px;
+    font-size: 20px;
+}
+
+.btn:hover,.btn:focus-visible {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.164);
+    letter-spacing: 2px;
+}
+
+.btn:active {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.336);
+
+}
+
+.btn-list-group li {
+    list-style: none;
+}
+
+.btn-list-group li button {
+    width:auto;
+    height: 35px;
+    text-align: left;
+    transition: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background-color: transparent;
+    border-width: 0px;
+    border-radius: 5px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.badge {
+    background-color: var(--primary);
+    color: white;
+    padding: 3px 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.img-rounded {
+    border-radius: 50%;
+}
+
+.info-card {
+    border: solid rgba(0, 0, 0, 0);
+
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border-left-width: 5px;
+    padding: 10px 10px;
+}
+
+/* Grids */
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.grid-direction-row {
+    flex-direction: row;
+}
+
+.grid-direction-column {
+    flex-direction: column;
+}
+
+.grid-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.grid-warp {
+    flex-wrap: wrap;
+}
+
+.grid-no-warp {
+    flex-wrap: nowrap;
+}
+
+.grid-left {
+    justify-content: flex-start;
+}
+
+.grid-center {
+    justify-content: center;
+}
+
+.grid-right {
+    justify-content: flex-end;
+}
+
+.center {
+    margin: auto;
+}
+
+/* Animations */
+
+.fade-in {
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-timing-function: var(--normal-tween);
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation-name: fadeout;
+    animation-duration: 1s;
+    animation-timing-function: var(--normal-tween);
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f100; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border: solid rgba(0, 0, 0, 0);
+
+    background: rgba(43, 43, 43, 0.5); 
+    border-radius: 5px;
+    padding: 5px;
+    border-left-width: 5px
+
+  }
+  
+    /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+/* Bottom Classes */
+.btn-primary, .badge-primary {
+    background-color: var(--primary);
+}
+
+.btn-secondary, .badge-secondary {
+    background-color: var(--secondary);
+}
+
+.btn-success, .badge-success {
+    background-color: var(--success);
+}
+
+.btn-warning, .badge-warning {
+    background-color: var(--warning);
+}
+
+.btn-danger, .badge-danger {
+    background-color: var(--danger);
+}
+
+.btn-info, .badge-info {
+    background-color: var(--info);
+}
+
+.btn-light, .badge-light {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.btn-dark, .badge-dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.btn-list-group-li-primary, .info-box-primary {
+    border-left-color: var(--primary);
+}
+
+.btn-list-group-li-secondary, .info-box-secondary {
+    border-left-color: var(--secondary);
+}
+
+.btn-list-group-li-success, .info-box-success {
+    border-left-color: var(--success);
+}
+
+.btn-list-group-li-warning, .info-box-warning {
+    border-left-color: var(--warning);
+}
+
+.btn-list-group-li-danger, .info-box-danger {
+    border-left-color: var(--danger);
+}
+
+.btn-list-group-li-info, .info-box-info {
+    border-left-color: var(--info);
+}
+
+.btn-list-group-li-light, .info-box-light {
+    border-left-color: var(--light);
+}
+
+.btn-list-group-li-dark, .info-box-dark {
+    border-left-color: var(--dark);
+}
+
+.btn-list-group li button:hover, .btn-list-group li button:focus-visible {
+    border-radius: 5px;
+    border-left-width: 5px;
+}
